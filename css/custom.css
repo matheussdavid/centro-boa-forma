@@ -25,6 +25,7 @@ html, body{
 /* MENU */
 .navbar {
     background: transparent;
+    transition: background 0.5s linear;
 }
 .navbar ul a:hover {
     background-color: transparent;
@@ -85,6 +86,47 @@ html, body{
     line-height: 1.8rem;
     text-align: justify;
 }
+.sobre .missao-visao-valores {
+    padding: 20px 0;
+    margin-top: 35px;
+}
+
+.sobre .missao-visao-valores .icon{
+    color: #fff;
+}
+
+.sobre .missao-visao-valores h3{
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.sobre .missao-visao-valores p{
+    color: #fff;
+    text-align: center;
+}
+
+/* SERVIÇOS */
+.servicos {
+    background-image: url('../img/textura2.png');
+}
+.servicos h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+.servicos h2::after { 
+    content: '';
+    display: block;
+    width: 100px;
+    border-top: 1px solid #2dc7d0;
+    margin: 15px auto;
+}
+.servicos p {
+    color: #fff;
+    line-height: 1.8rem;
+}
+
 
 /* CUSTOM */
 nav {
@@ -136,6 +178,9 @@ nav i.material-icons {
     .banner h2{
         font-size: 4rem;
     }
+    .container {
+        width: 85%
+    }
 }
   
 @media only screen and (min-width: 993px) {
@@ -144,5 +189,8 @@ nav i.material-icons {
     }
     .banner h2{
         font-size: 4rem;
+    }
+    .container {
+        width: 90%
     }
 }
