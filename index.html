@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Centro Boa Forma - Seu espaço de saúde</title>
+    <link rel="icon" href="./img/fav.png">
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--MATERIALIZE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="./css/custom.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- MENU MOBILE -->
+        <ul class="side-nav " id="menu-mobile">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#unidades">Unidades</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="navbar-fixed">
+            <nav class="navbar z-depth-0">
+                <div class="nav-wrapper container">
+                    <h1 class="logo_text">Centro Boa Forma - Seu espaço de saúde</h1>
+                    <a href="http://"><img class="logo_img" src="./img/logo.png" alt="Centro Boa Forma"></a>
+                    <ul class="right light hide-on-med-and-down">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#unidades">Unidades</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                    <a href="#" data-activates="menu-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="home bloco scrollspy" id="home">
+        <div class="row container banner">
+            <div class="col s12 center">
+                <h2 class="white-text">O melhor treinamento funcional da região</h2>
+                <p class="white-text light">Um novo conceito em prevenção, promoção e reabilitação de saúde para quem
+                    busca
+                    melhora do condicionamento e emagrecimento, além de ser divertido e desafiador. Quer
+                    experimentar?
+                </p>
+                <div class="row">
+                    <a class="btn btn-large blue-logo" href="#">Sobre nós</a>
+                    <a class="btn btn-large white black-text" href="http://">Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre bloco scrollspy" id="sobre">
+        <div class="row container">
+            <div class="col s12 center">
+                <h2 class="light">Sobre nós</h2>
+            </div>
+            <div class="col s12 l6">
+                <p class="light">A Centro Boa Forma chegou a Itabuna e região trazendo um novo conceito em prevenção, 
+                    promoção e reabilitação da saúde. Localizada no centro da cidade, conta com fácil estacionamento, 
+                    salas amplas e climatizadas, ambiente confortável e seguro aos seus usuários. 
+                    Suas instalações foram projetadas e equipadas sob medida, dentro dos padrões de acessibilidade, 
+                    para acolher principalmente pessoas com limitações funcionais. 
+                    O centro dispõe de uma equipe profissional qualificada e com experiência no mercado, 
+                    prezando sempre por tratamentos individualizados e baseados em evidências científicas. 
+                    Localizada no centro da cidade, conta com fácil estacionamento, salas amplas e climatizadas, 
+                    ambiente confortável e seguro aos seus usuários. </p>
+            </div>
+            <div class="col s12 l6">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- JQUERY JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">     </script>
+
+    <!-- MATERIALIZE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // INICIALIZAÇÃO
+        $(document).ready(function(){
+            // MENU MOBILE
+            $(".button-collapse").sideNav();
+            // LINK INTERNO
+            $(".scrollspy").scrollSpy({
+                scrollOffset: 0
+            });
+        }); 
+
+        // ADICIONANDO NAVCOLOR
+        $(window).on("scroll", function(){
+            if($(window).scrollTop() > 100){
+                $(".navbar").addClass("nav-color");
+            } else{
+                $(".navbar").removeClass("nav-color");
+            }
+        });
+    </script>
+</body>
+
+</html>
