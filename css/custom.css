@@ -127,6 +127,9 @@ html, body{
     line-height: 1.8rem;
 }
 
+.servicos .btn-horario {
+    padding-bottom: 20px;
+}
 
 /* CUSTOM */
 nav {
@@ -164,6 +167,26 @@ nav i.material-icons {
 .side-nav li>a {
     color: #fff;
     font-weight: bolder;
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+.tabs{
+    background-color: #222;
+}
+
+.tabs .tab a {
+    color: #fff;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #2dc7d0;
+}
+
+.tabs .indicator {
+    background-color: #2dc7d0;   
 }
   
 /* MEDIA */
