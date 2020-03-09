@@ -21,11 +21,11 @@
     <header>
         <!-- MENU MOBILE -->
         <ul class="side-nav " id="menu-mobile">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#unidades">Unidades</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a class="hide-menu" href="#home">Home</a></li>
+            <li><a class="hide-menu" href="#sobre">Sobre</a></li>
+            <li><a class="hide-menu" href="#servicos">Serviços</a></li>
+            <li><a class="hide-menu" href="#unidades">Unidades</a></li>
+            <li><a class="hide-menu" href="#contato">Contato</a></li>
         </ul>
         <div class="navbar-fixed">
             <nav class="navbar z-depth-0">
@@ -56,8 +56,8 @@
                     experimentar?
                 </p>
                 <div class="row">
-                    <a class="btn btn-large blue-logo" href="#">Sobre nós</a>
-                    <a class="btn btn-large white black-text" href="http://">Contato</a>
+                    <a href="#sobre" class="btn btn-large blue-logo" href="#">Sobre nós</a>
+                    <a href="#contato" class="btn btn-large white black-text" href="http://">Contato</a>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
     <section class="sobre bloco scrollspy" id="sobre">
         <div class="row container">
             <div class="col s12 center">
-                <h2 class="light">Sobre nós</h2>
+                <h2 class="light titulo">Sobre nós</h2>
             </div>
             <div class="col s12 l6">
                 <p class="light">A Centro Boa Forma chegou a Itabuna e região trazendo um novo conceito em prevenção, 
@@ -133,8 +133,8 @@
     <section class="servicos bloco scrollpsy" id="servicos">
         <div class="row container">
             <div class="col s12 center">
-                <h2 class="light">Serviços</h2>
-                <p class="light">
+                <h2 class="light titulo white-text">Serviços</h2>
+                <p class="light paragrafo white-text">
                     Suas instalações foram projetadas e equipadas sob medida, dentro dos padrões de acessibilidade, 
                     para acolher principalmente pessoas com limitações funcionais. 
                     A clínica dispõe de uma equipe profissional qualificada e com experiência no mercado, 
@@ -387,8 +387,8 @@
     <section class="unidades bloco scrollspy" id="unidades">
         <div class="row container">
             <div class="col s12 center">
-                <h2 class="light">Unidades</h2>
-                <p class="light">
+                <h2 class="light titulo white-text">Unidades</h2>
+                <p class="light paragrafo white-text">
                     Para oferecer serviços de acordo com a realidade e necessidade de cada região do Brasil, 
                     o centro boa forma possui unidades em quatro estados. 
                     Com atividades permanentes os espaços físicos buscam oferecer facilidade de acesso e atendimento de qualidade.
@@ -497,8 +497,19 @@
             });
             // MODAL
             $(".modal").modal();
-            //TABS
+            // TABS
             $("ul.tabs").tabs();
+            // ESCONDER MENU AO CLICAR
+            $(".hide-menu").click(function(){
+                $(".button-collpase").sideNav("hide");
+            });
+            // AUTOPLAY
+            function autoplay() {
+                $(".carousel").carousel("next");
+                setTimeout(autoplay, 4500);
+            }
+
+            autoplay();
         }); 
 
         // ADICIONANDO NAVCOLOR
